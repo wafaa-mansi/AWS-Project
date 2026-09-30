@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Adaptive Video Streaming</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 900px;
+            background-color: black;
+        }
+
+        .settings {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #currentQuality {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #status {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Adaptive Video Streaming</h1>
+
+    <video
+        id="video"
+        controls>
+    </video>
+
+    <div class="settings">
+
+        <label for="quality">
+            Video Quality:
+        </label>
+
+        <select id="quality">
+
+            <option value="-1">
+                Auto
+            </option>
+
+        </select>
+
+    </div>
+
+    <p id="currentQuality">
+        Current Quality: Auto
+    </p>
+
+    <p id="status">
+        Loading video...
+    </p>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
